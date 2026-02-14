@@ -16,7 +16,7 @@ public class Main {
             String name = inputCarNameValidation(scanner, i);
 
             // Ввод скорости автомобиля с проверкой
-            int speed = inputSpeedWithValidation(scanner, i);
+            int speed = inputSpeedValidation(scanner, i);
 
             Car car = new Car(name, speed);
 
@@ -53,12 +53,12 @@ public class Main {
         return name;
     }
 
-    private static int inputSpeedWithValidation(Scanner scanner, int carNumber) {
+    private static int inputSpeedValidation(Scanner scanner, int carNumber) {
         int speed;
 
         // Бесконечный цикл для проверки корректности ввода скорости
         while (true) {
-            System.out.print("Введите скорость машины №" + carNumber + " (1-250 км/ч): ");
+            System.out.print("Введите скорость машины №" + carNumber + " (1-250 км/ч): \n");
 
             // Проверяем, ввел ли пользователь целое число
             if (scanner.hasNextInt()) {
